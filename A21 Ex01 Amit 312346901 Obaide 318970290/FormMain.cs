@@ -15,6 +15,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         private User m_LoggedInUser;
         private FormCheckInRecommendation m_CheckInRecommensationForm;
         private FormFaceLikers m_FaceLikersForm;
+
         public FormMain()
         {
             InitializeComponent();
@@ -90,17 +91,23 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
 
         private void labelFriends_Click(object sender, EventArgs e)
         {
-            new Thread(fetchFriends).Start();
+               BlinkLabel label = this.labelFriends as BlinkLabel;
+               label.Blink();
+               new Thread(fetchFriends).Start();
         }
 
         private void labelPosts_Click(object sender, EventArgs e)
         {
-            new Thread(fetchPosts).Start();
+               BlinkLabel label = this.labelPosts as BlinkLabel;
+               label.Blink();
+               new Thread(fetchPosts).Start();
         }
 
         private void labelCheckIns_Click(object sender, EventArgs e)
         {
-            new Thread(fetchCheckIns).Start();
+               BlinkLabel label = this.labelCheckIns as BlinkLabel;
+               label.Blink();
+               new Thread(fetchCheckIns).Start();
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -115,19 +122,23 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
 
         private void buttonCheckinFeature_Click(object sender, EventArgs e)
         {
+            BlinkButton button = this.buttonCheckinFeature as BlinkButton;
+            button.Blink();
             this.Hide();
             m_CheckInRecommensationForm.StartPosition = FormStartPosition.Manual;
             m_CheckInRecommensationForm.Location = this.Location;
             m_CheckInRecommensationForm.Show();
         }
 
-        private void buttonFriendRaterFeature_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            m_FaceLikersForm.StartPosition = FormStartPosition.Manual;
-            m_FaceLikersForm.Location = this.Location;
-            m_FaceLikersForm.Show();
-        }
+          private void buttonFriendRaterFeature_Click(object sender, EventArgs e)
+          {
+               BlinkButton button = this.buttonFaceLikerFeature as BlinkButton;
+               button.Blink();
+               this.Hide();
+               m_FaceLikersForm.StartPosition = FormStartPosition.Manual;
+               m_FaceLikersForm.Location = this.Location;
+               m_FaceLikersForm.Show();
+          }
 
         private void emailTextBox_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {

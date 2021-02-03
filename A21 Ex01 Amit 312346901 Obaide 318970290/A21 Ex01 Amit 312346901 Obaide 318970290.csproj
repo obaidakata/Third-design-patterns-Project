@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook">
-      <HintPath>..\..\..\Documents\Facebook dll\Facebook.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\שנה ג\סמסטר א\Design Patterns\הגשות\01_FB01_BasicFacebookFeatures.V8.0.0.1\Facebook.dll</HintPath>
     </Reference>
     <Reference Include="FbGraphApiWrapper">
-      <HintPath>..\..\..\Documents\Facebook dll\FbGraphApiWrapper.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\שנה ג\סמסטר א\Design Patterns\הגשות\01_FB01_BasicFacebookFeatures.V8.0.0.1\FbGraphApiWrapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,6 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BlinkButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlBlinker.cs" />
     <Compile Include="FormCheckInRecommendation.cs">
       <SubType>Form</SubType>
     </Compile>
