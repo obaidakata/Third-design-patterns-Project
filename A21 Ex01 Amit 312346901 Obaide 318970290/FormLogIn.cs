@@ -18,6 +18,8 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
                try
                {
                     m_AppManager.Login();
+                    BlinkButton button = this.buttonLogin as BlinkButton;
+                    button.Blink();
                     this.Hide();
                     m_AppManager.MainForm.StartPosition = FormStartPosition.Manual;
                     m_AppManager.MainForm.Location = this.Location;

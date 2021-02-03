@@ -4,11 +4,12 @@ using System.Windows.Forms;
 
 namespace A21_Ex01_Amit_312346901_Obaide_318970290
 {
-
     public partial class FormSettings : Form
     {
         public event Action<Color> BackColorChangedListeners;
+
         public event Action<Font> FontChangedListeners;
+
         private Font m_DefaultFont;
         private Color m_DefaultBackGroundColor;
 
@@ -25,7 +26,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                BackColorChangedListeners.Invoke(colorDialog1.Color);
+                BackColorChangedListeners?.Invoke(colorDialog1.Color);
                 currentBackColor.BackColor = colorDialog1.Color;
             }
         }
@@ -42,16 +43,16 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         {
             if(fontDialog1.ShowDialog() == DialogResult.OK)
             {
-                FontChangedListeners.Invoke(fontDialog1.Font);
+                FontChangedListeners?.Invoke(fontDialog1.Font);
                 updateLablesFont(fontDialog1.Font);
             }
         }
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-            FontChangedListeners.Invoke(m_DefaultFont);
+            FontChangedListeners?.Invoke(m_DefaultFont);
             updateLablesFont(m_DefaultFont);
-            BackColorChangedListeners.Invoke(m_DefaultBackGroundColor);
+            BackColorChangedListeners?.Invoke(m_DefaultBackGroundColor);
             currentBackColor.BackColor = m_DefaultBackGroundColor;
         }
     }

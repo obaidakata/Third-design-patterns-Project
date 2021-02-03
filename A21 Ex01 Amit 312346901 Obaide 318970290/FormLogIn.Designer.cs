@@ -29,7 +29,7 @@
           /// </summary>
           private void InitializeComponent()
           {
-               this.buttonLogin = new System.Windows.Forms.Button();
+               this.buttonLogin = new BlinkButton();
                this.SuspendLayout();
                // 
                // buttonLogin
@@ -63,6 +63,6 @@
 
           #endregion
 
-          private System.Windows.Forms.Button buttonLogin;
+          private BlinkButton buttonLogin;
      }
 }
