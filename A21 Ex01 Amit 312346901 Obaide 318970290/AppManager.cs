@@ -11,7 +11,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         private LoginResult m_LoginResult;
         private FormLogIn m_FormLogin = null;
         private FormMain m_FormMain = null;
-        private FormSettings m_FormSettings= null;
+        private FormSettings m_FormSettings = null;
         private FormCheckInRecommendation m_FormCheckIn = null;
         private FormFaceLikers m_FormFriendRater = null;
 
@@ -61,6 +61,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
                 return m_FormSettings;
             }
         }
+
         public FormCheckInRecommendation CheckInForm
         {
             get

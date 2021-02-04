@@ -11,7 +11,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         private AppManager m_AppManager;
         private User m_LoggedInUser;
         private Dictionary<string, LikerData> m_LikersDic;
-        private List<LikerData> m_SortedListByTotalLikes;
+        private List<LikerData> m_LikersList;
 
         public FormFaceLikers()
         {
@@ -44,7 +44,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
 
         private void fillListBoxWithSortedData()
         {
-            foreach (LikerData likerData in m_SortedListByTotalLikes)
+            foreach (LikerData likerData in m_LikersList)
             {
                 if (likerData.UserName != null)
                 {
@@ -55,9 +55,9 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
 
         private void sortLikesData()
         {
-            Sorter sorter = new Sorter() { SwapStrategyMethod = (n1, n2) => n1.TotalLikes < n2.TotalLikes };
-            m_SortedListByTotalLikes = m_LikersDic.Values.ToList<LikerData>();
-            sorter.Sort(m_SortedListByTotalLikes);
+            Sorter sorter = new Sorter() { ShouldSwapStrategyMethod = (n1, n2) => n1.TotalLikes < n2.TotalLikes };
+            m_LikersList = m_LikersDic.Values.ToList<LikerData>();
+            sorter.Sort(m_LikersList);
         }
 
         private void fetchLikesList()
@@ -147,7 +147,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
 
         private void updateLabelTotalLikes()
         {
-            string numOfTotalLikes = m_SortedListByTotalLikes.First().TotalLikes.ToString();
+            string numOfTotalLikes = m_LikersList.First().TotalLikes.ToString();
             labelTotalLikes.Text = string.Format("total likes: {0}", numOfTotalLikes);
         }
 

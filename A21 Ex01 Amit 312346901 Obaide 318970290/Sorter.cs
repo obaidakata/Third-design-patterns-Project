@@ -6,7 +6,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
 {
     public class Sorter
     {
-        public Func<LikerData, LikerData, bool> SwapStrategyMethod { get; set; }
+        public Func<LikerData, LikerData, bool> ShouldSwapStrategyMethod { get; set; }
 
         public void Sort(List<LikerData> i_Array)
         {
@@ -16,7 +16,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
                 {
                     for(int j = i - g; j >= 0; j -= g)
                     {
-                        if(SwapStrategyMethod.Invoke(i_Array[j], i_Array[j + g]))
+                        if(ShouldSwapStrategyMethod.Invoke(i_Array[j], i_Array[j + g]))
                         {
                             LikerData first = i_Array[j];
                             LikerData second = i_Array[j + g];
