@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using FacebookWrapper;
 using FacebookWrapper.ObjectModel;
 
-namespace A21_Ex01_Amit_312346901_Obaide_318970290
+namespace FaceLikers
 {
     public sealed class AppManager
     {
@@ -88,9 +89,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
             }
         }
 
-        private AppManager()
-        {
-        } 
+        private AppManager(){ } 
 
         public User LoggedInUser
         {
@@ -114,22 +113,9 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
                 m_LoginResult = FacebookWrapper.FacebookService.Login(
                                                             AppId,
                                                             "email",
-                                                            "user_gender",
-                                                            "user_birthday",
-                                                            "user_friends",
-                                                            "user_posts",
-                                                            "user_events",
-                                                            "user_likes",
-                                                             "user_tagged_places",
                                                              "public_profile",
                                                              "publish_to_groups",
-                                                             "user_age_range",
-                                                             "user_link",
-                                                             "user_videos",
                                                              "groups_access_member_info",
-                                                             "user_location",
-                                                             "user_photos",
-                                                             "user_hometown",
                                                              "publish_to_groups",
                                                              "pages_read_engagement",
                                                              "pages_manage_posts");
@@ -157,6 +143,13 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
                 m_FormFriendRater = null;
                 m_FormSettings = null;
             }
+        }
+
+        public void ReturnToMainForm(Point i_Location)
+        {
+            MainForm.StartPosition = FormStartPosition.Manual;
+            MainForm.Location = i_Location;
+            MainForm.Show();
         }
     }
 }

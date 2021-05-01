@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace A21_Ex01_Amit_312346901_Obaide_318970290
+namespace FaceLikers
 {
     public partial class FormSettings : Form
     {

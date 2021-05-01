@@ -1,4 +1,4 @@
-﻿namespace A21_Ex01_Amit_312346901_Obaide_318970290
+﻿namespace FaceLikers
 {
      partial class FormMain
      {
@@ -34,11 +34,11 @@
                this.listBoxFriends = new System.Windows.Forms.ListBox();
                this.listBoxPosts = new System.Windows.Forms.ListBox();
                this.listBoxCheckIn = new System.Windows.Forms.ListBox();
-               this.labelFriends = new A21_Ex01_Amit_312346901_Obaide_318970290.BlinkLabel();
-               this.labelPosts = new A21_Ex01_Amit_312346901_Obaide_318970290.BlinkLabel();
-               this.labelCheckIns = new A21_Ex01_Amit_312346901_Obaide_318970290.BlinkLabel();
-               this.buttonCheckinFeature = new A21_Ex01_Amit_312346901_Obaide_318970290.BlinkButton();
-               this.buttonFaceLikerFeature = new A21_Ex01_Amit_312346901_Obaide_318970290.BlinkButton();
+               this.labelFriends = new BlinkLabel();
+               this.labelPosts = new BlinkLabel();
+               this.labelCheckIns = new BlinkLabel();
+               this.buttonCheckinFeature = new BlinkButton();
+               this.buttonFaceLikerFeature = new BlinkButton();
                this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
                this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
                this.pictureBoxBirthday = new System.Windows.Forms.PictureBox();
@@ -49,7 +49,7 @@
                this.birthdayTextBox = new System.Windows.Forms.TextBox();
                this.emailTextBox = new System.Windows.Forms.TextBox();
                this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-               this.pictureBoxProfileImage = new A21_Ex01_Amit_312346901_Obaide_318970290.PicturesBoxChangeSizeProxy();
+               this.pictureBoxProfileImage = new PicturesBoxChangeSizeProxy();
                this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
                this.SetteingsButton = new System.Windows.Forms.Button();
                this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -237,7 +237,7 @@
                // pictureBoxBirthday
                // 
                this.pictureBoxBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
-               this.pictureBoxBirthday.Image = global::A21_Ex01_Amit_312346901_Obaide_318970290.Properties.Resources.birthday;
+               // this.pictureBoxBirthday.Image = global::FaceLikers.Properties.Resources.birthday;
                this.pictureBoxBirthday.Location = new System.Drawing.Point(2, 182);
                this.pictureBoxBirthday.Margin = new System.Windows.Forms.Padding(2);
                this.pictureBoxBirthday.Name = "pictureBoxBirthday";
@@ -249,7 +249,7 @@
                // pictureBoxEmail
                // 
                this.pictureBoxEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-               this.pictureBoxEmail.Image = global::A21_Ex01_Amit_312346901_Obaide_318970290.Properties.Resources.eMail;
+               // this.pictureBoxEmail.Image = global::FaceLikers.Properties.Resources.eMail;
                this.pictureBoxEmail.Location = new System.Drawing.Point(2, 92);
                this.pictureBoxEmail.Margin = new System.Windows.Forms.Padding(2);
                this.pictureBoxEmail.Name = "pictureBoxEmail";
@@ -261,7 +261,7 @@
                // pictureBoxUserName
                // 
                this.pictureBoxUserName.Dock = System.Windows.Forms.DockStyle.Fill;
-               this.pictureBoxUserName.Image = global::A21_Ex01_Amit_312346901_Obaide_318970290.Properties.Resources.id;
+               // this.pictureBoxUserName.Image = global::FaceLikers.Properties.Resources.id;
                this.pictureBoxUserName.Location = new System.Drawing.Point(2, 2);
                this.pictureBoxUserName.Margin = new System.Windows.Forms.Padding(2);
                this.pictureBoxUserName.Name = "pictureBoxUserName";

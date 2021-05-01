@@ -1,4 +1,4 @@
-﻿namespace A21_Ex01_Amit_312346901_Obaide_318970290
+﻿namespace FaceLikers
 {
      partial class FormFaceLikers
      {
@@ -43,14 +43,14 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxLeastLikedPhoto = new A21_Ex01_Amit_312346901_Obaide_318970290.PicturesBoxChangeSizeProxy();
+            this.pictureBoxLeastLikedPhoto = new PicturesBoxChangeSizeProxy();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxLastLikedPhoto = new A21_Ex01_Amit_312346901_Obaide_318970290.PicturesBoxChangeSizeProxy();
+            this.pictureBoxLastLikedPhoto = new PicturesBoxChangeSizeProxy();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxMostLikedPhoto = new A21_Ex01_Amit_312346901_Obaide_318970290.PicturesBoxChangeSizeProxy();
+            this.pictureBoxMostLikedPhoto = new PicturesBoxChangeSizeProxy();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxFirstLikedPhoto = new A21_Ex01_Amit_312346901_Obaide_318970290.PicturesBoxChangeSizeProxy();
-            this.pictureBoxProfileImage = new A21_Ex01_Amit_312346901_Obaide_318970290.PicturesBoxChangeSizeProxy();
+            this.pictureBoxFirstLikedPhoto = new PicturesBoxChangeSizeProxy();
+            this.pictureBoxProfileImage = new PicturesBoxChangeSizeProxy();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();

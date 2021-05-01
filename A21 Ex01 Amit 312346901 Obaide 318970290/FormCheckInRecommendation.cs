@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 
-namespace A21_Ex01_Amit_312346901_Obaide_318970290
+namespace FaceLikers
 {
     public partial class FormCheckInRecommendation : FormThatListen
     {
@@ -25,9 +25,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            m_AppManager.MainForm.StartPosition = FormStartPosition.Manual;
-            m_AppManager.MainForm.Location = this.Location;
-            m_AppManager.MainForm.Show();
+            m_AppManager.ReturnToMainForm(this.Location);
         }
 
         private void createButtons()
@@ -39,7 +37,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
             {
                 Button buttonToAdd = new Button();
                 buttonToAdd.Text = buttonName;
-                buttonToAdd.Click += new EventHandler(button_Click);
+                buttonToAdd.Click += button_Click;
                 buttonToAdd.Dock = DockStyle.Fill;
                 buttonsRow.Controls.Add(buttonToAdd);
                 buttonsRow.ColumnStyles.Add(new ColumnStyle { SizeType = SizeType.Percent, Width = width });
@@ -57,6 +55,9 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
                         listBoxCheckIns.Items.Add(checkIn.Place.Name);
                     }
                 }
+                listBoxCheckIns.Items.Add("Berlin");
+                listBoxCheckIns.Items.Add("Tel aviv");
+                listBoxCheckIns.Items.Add("Haifa");
 
                 if (listBoxCheckIns.Items.Count == 0)
                 {

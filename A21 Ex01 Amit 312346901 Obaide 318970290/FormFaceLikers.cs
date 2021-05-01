@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 
-namespace A21_Ex01_Amit_312346901_Obaide_318970290
+namespace FaceLikers
 {
     public partial class FormFaceLikers : FormThatListen
     {
@@ -202,9 +202,7 @@ namespace A21_Ex01_Amit_312346901_Obaide_318970290
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            m_AppManager.MainForm.StartPosition = FormStartPosition.Manual;
-            m_AppManager.MainForm.Location = this.Location;
-            m_AppManager.MainForm.Show();
+            m_AppManager.ReturnToMainForm(this.Location);
         }
 
         private void FormFaceLikers_Shown(object sender, EventArgs e)
